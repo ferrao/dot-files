@@ -1,8 +1,8 @@
 @import "../omarchy/current/theme/waybar.css";
 
 * {
-  background-color: @background;
-  color: @foreground;
+  /*background-color: @background;*/
+  color: #ffffff;
 
   border: none;
   border-radius: 0;
@@ -10,6 +10,15 @@
   font-family: CaskaydiaMono Nerd Font;
   font-size: 12px;
 }
+
+window#waybar {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+window#waybar.hidden {
+    opacity: 1;
+}
+
 
 .modules-left {
   margin-left: 8px;
