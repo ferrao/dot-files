@@ -6,75 +6,75 @@
 // To see the default key bindings run `zed: Open Default Keymap`
 // from the command palette.
 [
-    {
-        "context": "Workspace",
-        "bindings": {
-            "\\ space": "workspace::ToggleLeftDock",
-            "\\ alt": "workspace::ToggleRightDock",
-            "\\ t": "workspace::ToggleBottomDock",
-            "ctrl-h": "workspace::ActivatePaneLeft",
-            "ctrl-l": "workspace::ActivatePaneRight",
-            "ctrl-k": "workspace::ActivatePaneUp",
-            "ctrl-j": "workspace::ActivatePaneDown",
-            "\\ f": "file_finder::Toggle",
-            "\\ s": "workspace::NewSearch"
-        }
-    },
-    {
-        "context": "Editor",
-        "bindings": {
-            "\\ e": "editor::GoToDiagnostic",
-            "ctrl-h": "workspace::ActivatePaneLeft",
-            "ctrl-l": "workspace::ActivatePaneRight",
-            "ctrl-k": "workspace::ActivatePaneUp",
-            "ctrl-j": "workspace::ActivatePaneDown",
-            "ctrl-s": "pane::RevealInProjectPanel",
-            "ctrl-shift-l": "pane::SplitVertical",
-            "ctrl-a": "editor::ShowEditPrediction",
-            "ctrl-]": "editor::AcceptPartialEditPrediction"
-        }
-    },
-
-    {
-        "context": "Editor && (showing_code_actions || showing_completions)",
-        "bindings": {
-            "up": "editor::ContextMenuPrevious",
-            "ctrl-k": "editor::ContextMenuPrevious",
-            "down": "editor::ContextMenuNext",
-            "ctrl-j": "editor::ContextMenuNext",
-            "ctrl-h": "editor::ContextMenuFirst",
-            "ctrl-l": "editor::ContextMenuLast"
-        }
-    },
-    {
-        "context": "ProjectPanel && !editing",
-        "bindings": {
-            "ctrl-l": "workspace::ActivatePaneRight",
-            "a": "project_panel::NewFile",
-            "r": "project_panel::Rename",
-            "d": "project_panel::Delete"
-            // "s": "" TODO: WAITING FOR ZED TO SUPPORT open in vsplit
-        }
-    },
-    {
-        "context": "VimControl && !menu",
-        "bindings": {
-            "ctrl-w": ["pane::CloseActiveItem", { "save_intent": "save_all" }]
-        }
-    },
-    {
-        "context": "Pane",
-        "bindings": {
-            "alt-j": "pane::ActivateNextItem",
-            "alt-h": "pane::ActivateNextItem",
-            "alt-l": "pane::ActivatePreviousItem",
-            "alt-k": "pane::ActivatePreviousItem"
-        }
-    },
-    {
-        "context": "Terminal",
-        "bindings": {
-            "ctrl-w": "pane::CloseActiveItem"
-        }
+  {
+    "context": "Workspace",
+    "bindings": {
+      "\\ space": "workspace::ToggleLeftDock",
+      "\\ alt": "workspace::ToggleRightDock",
+      "\\ t": "workspace::ToggleBottomDock",
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "\\ f": "file_finder::Toggle",
+      "\\ s": "workspace::NewSearch"
     }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "\\ e": "editor::GoToDiagnostic",
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-s": "pane::RevealInProjectPanel",
+      "ctrl-shift-l": "pane::SplitVertical",
+      "ctrl-a": "editor::ShowEditPrediction",
+      "ctrl-]": "editor::AcceptPartialEditPrediction"
+    }
+  },
+
+  {
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "bindings": {
+      "up": "editor::ContextMenuPrevious",
+      "ctrl-k": "editor::ContextMenuPrevious",
+      "down": "editor::ContextMenuNext",
+      "ctrl-j": "editor::ContextMenuNext",
+      "ctrl-h": "editor::ContextMenuFirst",
+      "ctrl-l": "editor::ContextMenuLast"
+    }
+  },
+  {
+    "context": "ProjectPanel && !editing",
+    "bindings": {
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "a": "project_panel::NewFile",
+      "r": "project_panel::Rename",
+      "d": "project_panel::Delete",
+      "s": "project_panel::OpenSplitVertical"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "ctrl-w": ["pane::CloseActiveItem", { "save_intent": "save_all" }]
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "alt-j": "pane::ActivateNextItem",
+      "alt-h": "pane::ActivateNextItem",
+      "alt-l": "pane::ActivatePreviousItem",
+      "alt-k": "pane::ActivatePreviousItem"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-w": "pane::CloseActiveItem"
+    }
+  }
 ]
