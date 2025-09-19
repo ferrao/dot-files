@@ -99,6 +99,12 @@
         "default": ["", "", ""],
       },
     },
+    "custom/screenrecording-indicator": {
+      "on-click": "omarchy-cmd-screenrecord",
+      "exec": "$OMARCHY_PATH/default/waybar/indicators/screen-recording.sh",
+      "signal": 8,
+      "return-type": "json",
+    },
     "tray": {
       "icon-size": 12,
       "spacing": 12,
@@ -144,7 +150,7 @@
     },
     "cpu": {
       "interval": 1,
-      "format": "{icon0} {icon1} {icon2} {icon3} {icon4} {icon5} {icon6} {icon7} {icon8} {icon9} {icon10} {icon11} {icon12} {icon13} {icon14} {icon15} {usage}%",
+      "format": "{icon0} {icon1} {icon2} {icon3} {icon4} {icon5} {icon6} {icon7} {icon8} {icon9} {icon10} {icon11} {icon12} {icon13} {icon14} {icon15} {usage:2}% @ {max_frequency:0.2f}GHz",
       "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
       "on-click": "alacritty -e btop",
     },
@@ -154,7 +160,7 @@
       "interval": 2,
       "critical-threshold": 85,
       "format": " {temperatureC}°C ",
-      "format-critical": " {temperatureC}°C 🔥 ",
+      "format-critical": " {temperatureC}°C 🔥",
     },
     "temperature#gpu": {
       "hwmon-path-abs": "/sys/devices/pci0000:00/0000:00:08.1/0000:e3:00.0/hwmon",
