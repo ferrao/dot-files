@@ -1,0 +1,17 @@
+#!/bin/bash
+
+CONFIG_PATH=~/.config/waybar
+
+# Count connected monitors (adjust grep if your external monitor name varies)
+monitor_count=$(hyprctl monitors | grep -c "Monitor")
+
+if [ "$monitor_count" -gt 1 ]; then
+  # External monitor connected: Use dual config
+  cp $CONFIG_PATH/config.dual.jsonc $CONFIG_PATH/config.jsonc
+else
+  # Only laptop: Use single config
+  cp $CONFIG_PATH/config.single.jsonc $CONFIG_PATH/config.jsonc
+fi
+
+pkill -x waybar
+waybar &

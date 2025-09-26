@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Check if walker is installed
+if ! command -v walker &>/dev/null; then
+  echo "Error: walker is not installed" >&2
+  exit 1
+fi
+
+# Read input from stdin (to mimic dmenu-wl's behavior)
+input=$(cat)
+
+# Pass input to walker and capture the selected item
+# Using --type dmenu to emulate dmenu-wl's menu behavior
+selection=$(echo "$input" | walker -d -f -k)
+
+# Output the selected item to stdout
+if [ -n "$selection" ]; then
+  echo "$selection"
+else
+  exit 1
+fi

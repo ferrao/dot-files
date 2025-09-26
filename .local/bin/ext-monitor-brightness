@@ -1,0 +1,24 @@
+#!/bin/bash
+
+STEP=20
+
+if [ $# -eq 0 ]; then
+  echo "Usage: $0 <up|down>"
+  echo "  up   - Increase brightness by $STEP"
+  echo "  down - Decrease brightness by $STEP"
+  exit 1
+fi
+
+case "$1" in
+"up")
+  ddcutil setvcp 10 + $STEP
+  ;;
+"down")
+  ddcutil setvcp 10 - $STEP
+  ;;
+*)
+  echo "Error: Invalid argument '$1'"
+  echo "Usage: $0 <up|down>"
+  exit 1
+  ;;
+esac
