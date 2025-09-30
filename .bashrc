@@ -8,6 +8,7 @@ source ~/.local/share/omarchy/default/bash/rc
 # alias p='python'
 alias vim=nvim
 alias host=dog
+alias claude='TERM=xterm-256color claude'
 
 # Use neovim as the default editor
 export EDITOR="nvim"
