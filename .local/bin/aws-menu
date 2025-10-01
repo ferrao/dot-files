@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Check if walker is installed
+if ! command -v walker &>/dev/null; then
+  echo "Error: walker is not installed" >&2
+  exit 1
+fi
+
+ACCOUNT_FILE=~/.aws/accounts
+
+accounts=$(cat $ACCOUNT_FILE)
+
+# Pass input to walker and capture the selected item
+# Using --type dmenu to emulate dmenu-wl's menu behavior
+selection=$(echo "$accounts" | walker -d -f -k -l 2 -t ',')
+
+# Output the selected item to stdout
+if [ -n "$selection" ]; then
+  ydotool type $selection
+else
+  exit 1
+fi
