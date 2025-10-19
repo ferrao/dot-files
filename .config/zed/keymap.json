@@ -30,8 +30,7 @@
       "ctrl-j": "workspace::ActivatePaneDown",
       "ctrl-s": "pane::RevealInProjectPanel",
       "ctrl-shift-l": "pane::SplitVertical",
-      "ctrl-a": "editor::ShowEditPrediction",
-      "ctrl-]": "editor::AcceptPartialEditPrediction"
+      "ctrl-a": "editor::ShowEditPrediction"
     }
   },
 

@@ -11,7 +11,7 @@ input=$(cat)
 
 # Pass input to walker and capture the selected item
 # Using --type dmenu to emulate dmenu-wl's menu behavior
-selection=$(echo "$input" | walker -d -f -k)
+selection=$(echo "$input" | walker -d -e)
 
 # Output the selected item to stdout
 if [ -n "$selection" ]; then

@@ -13,5 +13,4 @@ else
   cp $CONFIG_PATH/config.single.jsonc $CONFIG_PATH/config.jsonc
 fi
 
-pkill -x waybar
-waybar &
+pkill -x -SIGUSR2 waybar
