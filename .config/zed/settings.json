@@ -7,24 +7,29 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "base_keymap": "JetBrains",
   "context_servers": {
+    "mcp-server-firecrawl": {
+      "source": "extension",
+      "enabled": true,
+      "settings": {
+        "firecrawl_api_key": "fc-3cc3f86f05234447be4d4b6ad52d79cb"
+      }
+    },
     "mcp-server-context7": {
       "source": "extension",
       "settings": {
-        "default_minimum_tokens": "10000"
+        "context7_api_key": "ctx7sk-79d7e033-b7d0-4335-bf0e-bcc02971801f"
       }
     }
   },
   "hide_mouse": "on_typing_and_movement",
-  "edit_predictions": {
-    "mode": "subtle",
-    "copilot": {
-      "proxy": null,
-      "proxy_no_verify": null
-    },
-    "enabled_in_text_threads": false
+
+  "icon_theme": {
+    "mode": "dark",
+    "light": "JetBrains New UI Icons (Dark)",
+    "dark": "JetBrains New UI Icons (Dark)"
   },
-  "icon_theme": "JetBrains New UI Icons (Dark)",
   "telemetry": {
     "diagnostics": true,
     "metrics": true
@@ -51,7 +56,7 @@
     "play_sound_when_agent_done": true,
     "always_allow_tool_actions": false,
     "default_model": {
-      "provider": "openai",
+      "provider": "copilot_chat",
       "model": "gpt-4o"
     },
     "default_profile": "write",
@@ -109,11 +114,15 @@
       }
     }
   },
-  "editor_model": {
-    "provider": "zed.dev",
-    "model": "claude-3-7-sonnet-latest"
-  },
   "show_edit_predictions": true,
+  "edit_predictions": {
+    "mode": "subtle",
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null
+    },
+    "enabled_in_text_threads": false
+  },
   "features": {
     // Which inline completion provider to use.
     "edit_prediction_provider": "copilot"
@@ -135,7 +144,7 @@
     "liga": true
   },
   "ui_font_size": 18,
-  "buffer_font_size": 23.0,
+  "buffer_font_size": 10.0,
   "relative_line_numbers": true,
   "soft_wrap": "editor_width",
   "show_whitespaces": "selection",
@@ -148,7 +157,7 @@
   },
   "vertical_scroll_margin": 0,
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "Oceanic Next",
     "dark": "JetBrains New Dark"
   },
