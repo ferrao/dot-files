@@ -10,10 +10,10 @@
     "modules-center": [
       "temperature#gpu",
       "temperature#cpu",
+      "temperature#ssd",
       "cpu",
       "memory",
-      "disk",
-      "temperature#ssd",
+      "disk"
     ],
     "modules-right": [
       "group/tray-expander",
@@ -71,8 +71,8 @@
       "input-filename": "temp1_input",
       "interval": 2,
       "critical-threshold": 80,
-      "format": "{temperatureC}°C ",
-      "format-critical": "{temperatureC}°C 🔥 ",
+      "format": " {temperatureC}°C ",
+      "format-critical": " {temperatureC}°C 🔥 ",
     },
     "memory": {
       "interval": 30,
