@@ -8,11 +8,13 @@ fi
 
 ACCOUNT_FILE=~/.aws/accounts
 
-accounts=$(cat $ACCOUNT_FILE)
+labels=$(cat $ACCOUNT_FILE | cut -f 2 -d ',')
+values=$(cat $ACCOUNT_FILE | cut -f 1 -d ',')
 
 # Pass input to walker and capture the selected item
 # Using --type dmenu to emulate dmenu-wl's menu behavior
-selection=$(echo "$accounts" | walker -d -f -k -l 2 -t ',')
+index=$(( $(echo "$labels" | walker -d --index) + 1 ))
+selection=$(echo "$values" | head -n $index | tail -n 1)
 
 # Output the selected item to stdout
 if [ -n "$selection" ]; then
