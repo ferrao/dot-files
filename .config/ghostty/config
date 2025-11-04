@@ -7,5 +7,4 @@ font-family = "JetBrainsMono Nerd Font"
 font-style-italic = "JetBrains Mono Thin Italic"
 scrollback-limit = 2000000
 theme = custom
-
 keybind = shift+enter=text:\x1b\r
