@@ -13,13 +13,13 @@
       "source": "extension",
       "enabled": true,
       "settings": {
-        "firecrawl_api_key": "fc-3cc3f86f05234447be4d4b6ad52d79cb"
+        "firecrawl_api_key": "${FIRECRAWL_API_KEY}"
       }
     },
     "mcp-server-context7": {
       "source": "extension",
       "settings": {
-        "context7_api_key": "ctx7sk-79d7e033-b7d0-4335-bf0e-bcc02971801f"
+        "context7_api_key": "CONTEXT7_API_KEY"
       }
     }
   },
@@ -50,7 +50,6 @@
     "git_status": true,
     "button": true
   },
-  "agent_font_size": 18,
   "agent": {
     "use_modifier_to_send": true,
     "play_sound_when_agent_done": true,
@@ -92,7 +91,7 @@
           }
         },
         "name": "Ask",
-        //"enable_all_context_servers": true,
+        "enable_all_context_servers": true,
         "tools": {
           "contents": true,
           "diagnostics": true,
@@ -137,7 +136,6 @@
     }
   },
   "middle_click_paste": true,
-  // "buffer_font_family": "0xProto Nerd Font",
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_features": {
     "calt": true,
@@ -145,7 +143,7 @@
   },
   "ui_font_size": 18,
   "buffer_font_size": 10.0,
-  "relative_line_numbers": true,
+  "relative_line_numbers": "enabled",
   "soft_wrap": "editor_width",
   "show_whitespaces": "selection",
   "wrap_guides": [80, 120],
@@ -190,7 +188,7 @@
         "tailwindcss-language-server"
       ]
     },
-    "TypeScript": {
+    "JavaScript": {
       "inlay_hints": {
         "enabled": false
       }
@@ -209,6 +207,11 @@
           "HEEX": "html",
           "Elixir": "html"
         }
+      }
+    },
+    "emmet-language-server": {
+      "settings": {
+        "languages": ["HEEX", "HTML", "JavaScript", "TSX", "CSS"]
       }
     }
   },
