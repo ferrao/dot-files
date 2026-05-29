@@ -5,9 +5,14 @@ background-blur-radius = 20
 font-size = 12
 font-family = "JetBrainsMono Nerd Font"
 font-style-italic = "JetBrains Mono Thin Italic"
-scrollback-limit = 100000
-theme = custom
+scrollback-limit = 20000000
 keybind = shift+enter=text:\x1b\r
+keybind = super+r=reload_config
+cursor-style = block
+theme = custom
 
 # Slowdown mouse scrolling
 mouse-scroll-multiplier = 0.95
+
+# Fix general slowness on hyprland (https://github.com/ghostty-org/ghostty/discussions/3224)
+async-backend = epoll

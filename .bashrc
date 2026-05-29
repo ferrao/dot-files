@@ -12,3 +12,7 @@ done
 
 # Load folder specific env variables
 eval "$(direnv hook bash)"
+
+# >>> grok installer >>>
+export PATH="$HOME/.grok/bin:$PATH"
+# <<< grok installer <<<
